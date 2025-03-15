@@ -5,7 +5,7 @@ function Navbar() {
   return (
     <nav style={navbarStyle}>
       <Link to="/" style={{ textDecoration: 'none' }}>
-        <img src="/SAECrownWhite.png" alt="Logo" style={{ height: '40px' }} />
+        <img src="/LogoWhite.png" alt="Logo" style={{ height: '40px' }} />
         </Link>
       <div>
         <Link to="/" style={linkStyle}>Home</Link>
@@ -18,9 +18,8 @@ function Navbar() {
   );
 }
 
-// 🔹 Adjusted styles to make the navbar overlay the background
 const navbarStyle = {
-  position: 'absolute',  // Ensures it's on top of the image
+  position: 'absolute',  //on top of image
   top: 0,
   left: 0,
   width: '100%',
@@ -28,9 +27,9 @@ const navbarStyle = {
   justifyContent: 'space-between',
   alignItems: 'center',
   padding: '15px 30px',
-  background: 'rgba(0, 0, 0, 0)', // Slightly transparent black
+  background: 'rgba(0, 0, 0, 0)',
   color: 'white',
-  zIndex: 10, // Ensures it appears on top of everything
+  zIndex: 10, //appears on top of everything
 };
 
 const linkStyle = {

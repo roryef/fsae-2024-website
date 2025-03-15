@@ -5,6 +5,7 @@ import Team from './Team';
 import News from './News';
 import Sponsors from './Sponsors';
 import Contact from './Contact';
+import Join from './Join';
 import Navbar from './Navbar';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/news" element={<News />} />
         <Route path="/sponsors" element={<Sponsors />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/join" element={<Join />} />
       </Routes>
     </Router>
   );
