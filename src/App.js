@@ -8,6 +8,7 @@ import News from './News';
 import Sponsors from './Sponsors';
 import Join from './Join';
 import Navbar from './Navbar';
+import Footer from './Footer';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/sponsors" element={<Sponsors />} />
         <Route path="/join" element={<Join />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
