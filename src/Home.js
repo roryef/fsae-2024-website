@@ -6,13 +6,20 @@ function Home() {
     <div style={pageStyle}>
       {/* Hero Section */}
       <section style={heroSectionStyle}>
-        <img src="/Test.jpg" alt="Formula Racing" style={imageStyle} />
-        <div style={overlayStyle}>
+        {/* Background Video */}
+        <video autoPlay loop muted playsInline style={heroVideoStyle}>
+          <source src="/hero_short.mov" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        {/* Dark Overlay */}
+        <div style={heroOverlayStyle}></div>
+
+        {/* Content on top of the video */}
+        <div style={overlayContentStyle}>
           <img src="/LogoWhite.png" alt="Logo" style={logoStyle} />
           <h1 style={headingStyle}>Columbia University Formula Racing</h1>
-          <button style={buttonStyle}>
-            <Link to="/join" style={{ textDecoration: 'none' }}>JOIN US</Link>
-          </button>
+          <button style={buttonStyle}>JOIN US</button>
         </div>
       </section>
 
@@ -87,7 +94,7 @@ const heroSectionStyle = {
   overflow: 'hidden',
 };
 
-const imageStyle = {
+const heroVideoStyle = {
   position: 'absolute',
   top: 0,
   left: 0,
@@ -96,16 +103,24 @@ const imageStyle = {
   objectFit: 'cover',
 };
 
-const overlayStyle = {
+const heroOverlayStyle = {
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  width: '100%',
+  height: '100%',
+  background: 'rgba(0, 0, 0, 0.3)',
+  zIndex: 1,
+};
+
+const overlayContentStyle = {
   position: 'absolute',
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  color: 'white',
   textAlign: 'center',
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
+  color: 'white',
+  zIndex: 2,
 };
 
 const logoStyle = {
