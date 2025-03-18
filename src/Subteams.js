@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Team() {
+function Subteams() {
   return (
     <div style={pageStyle}>
       {/* Hero */}
@@ -167,4 +167,4 @@ const smallButtonStyle = {
   transition: 'all 0.3s ease-in-out',
 };
 
-export default Team;
+export default Subteams;

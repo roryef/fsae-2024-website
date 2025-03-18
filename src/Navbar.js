@@ -9,10 +9,12 @@ function Navbar() {
         </Link>
       <div>
         <Link to="/" style={linkStyle}>Home</Link>
-        <Link to="/team" style={linkStyle}>Team</Link>
+        <Link to="/about" style={linkStyle}>About</Link>
+        <Link to="/subteams" style={linkStyle}>Subteams</Link>
+        <Link to="/cars" style={linkStyle}>Cars</Link>
         <Link to="/news" style={linkStyle}>News</Link>
         <Link to="/sponsors" style={linkStyle}>Sponsors</Link>
-        <Link to="/contact" style={buttonStyle}>Contact</Link>
+        <Link to="/join" style={buttonStyle}>Join Us</Link>
       </div>
     </nav>
   );

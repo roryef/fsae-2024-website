@@ -19,7 +19,11 @@ function Home() {
         <div style={overlayContentStyle}>
           <img src="/LogoWhite.png" alt="Logo" style={logoStyle} />
           <h1 style={headingStyle}>Columbia University Formula Racing</h1>
-          <button style={buttonStyle}>JOIN US</button>
+          <div style={statsButtonContainerStyle}>
+            <Link to="/join" style={buttonStyle}>JOIN US</Link>
+            <Link to="/sponsors" style={donateButtonStyle}>DONATE</Link>
+          </div>
+
         </div>
       </section>
 
@@ -29,7 +33,7 @@ function Home() {
         <div style={statsOverlayStyle}>
           <h2 style={statsHeadingStyle}>FOUNDED IN [DATE], WE’VE BUILT [X] CARS</h2>
           <p style={statsTextStyle}>WE HAVE [X] MEMBERS AND [X] SPONSORS</p>
-          <div style={buttonContainerStyle}>
+          <div style={statsButtonContainerStyle}>
             <button style={smallButtonStyle}>ABOUT</button>
             <button style={smallButtonStyle}>SPONSORS</button>
             <button style={smallButtonStyle}>JOIN</button>
@@ -87,6 +91,7 @@ const pageStyle = {
   color: 'white',
 };
 
+/* hero */
 const heroSectionStyle = {
   position: 'relative',
   width: '100%',
@@ -137,6 +142,13 @@ const headingStyle = {
   marginBottom: '20px',
 };
 
+const buttonContainerStyle = {
+  display: 'flex',
+  gap: '20px',
+  justifyContent: 'center',
+  marginTop: '20px',
+};
+
 const buttonStyle = {
   padding: '12px 24px',
   border: '2px solid white',
@@ -147,6 +159,12 @@ const buttonStyle = {
   color: 'white',
   cursor: 'pointer',
   transition: 'all 0.3s ease-in-out',
+};
+
+const donateButtonStyle = {
+  ...buttonStyle,
+  background: 'white',
+  color: 'black',
 };
 
 /* stats */
@@ -192,7 +210,7 @@ const statsTextStyle = {
   marginBottom: '20px',
 };
 
-const buttonContainerStyle = {
+const statsButtonContainerStyle = {
   display: 'flex',
   justifyContent: 'center',
   gap: '10px',
