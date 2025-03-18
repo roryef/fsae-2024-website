@@ -5,7 +5,7 @@ function Team() {
     <div style={pageStyle}>
       {/* Hero */}
       <section style={heroSectionStyle}>
-        <img src="/Test.jpg" alt="Our Team" style={heroImageStyle} />
+        <img src="/team.png" alt="Our Team" style={heroImageStyle} />
         <div style={overlayStyle}>
           <h1 style={heroHeadingStyle}>OUR TEAM</h1>
         </div>

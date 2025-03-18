@@ -153,14 +153,17 @@ const statsImageStyle = {
 
 const statsOverlayStyle = {
   position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
+  top: 0,
+  left: 0,
+  width: '100%',
+  height: '100%',
+  background: 'rgba(0, 0, 0, 0.6)',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
   textAlign: 'center',
   color: 'white',
-  background: 'rgba(0, 0, 0, 0.2)',
-  padding: '20px',
-  borderRadius: '10px',
 };
 
 const statsHeadingStyle = {
