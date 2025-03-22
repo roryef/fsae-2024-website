@@ -12,10 +12,8 @@ function Home() {
           Your browser does not support the video tag.
         </video>
 
-        {/* Dark Overlay */}
+        {/* Content on top of video */}
         <div style={heroOverlayStyle}></div>
-
-        {/* Content on top of the video */}
         <div style={overlayContentStyle}>
           <img src="/LogoWhite.png" alt="Logo" style={logoStyle} />
           <h1 style={headingStyle}>Columbia University Formula Racing</h1>
@@ -53,8 +51,8 @@ function Home() {
           members develop collaborative problem-solving skills.
         </p>
         <div style={imageContainerStyle}>
-          <img src="/Banana.jpg" alt="Team Photo" style={missionImageStyle} />
-          <img src="/Banana.jpg" alt="Team Photo" style={missionImageStyle} />
+          <img src="/Banana.jpg" alt="Team" style={missionImageStyle} />
+          <img src="/Banana.jpg" alt="Team" style={missionImageStyle} />
         </div>
       </section>
 
@@ -142,12 +140,12 @@ const headingStyle = {
   marginBottom: '20px',
 };
 
-const buttonContainerStyle = {
-  display: 'flex',
-  gap: '20px',
-  justifyContent: 'center',
-  marginTop: '20px',
-};
+// const buttonContainerStyle = {
+//   display: 'flex',
+//   gap: '20px',
+//   justifyContent: 'center',
+//   marginTop: '20px',
+// };
 
 const buttonStyle = {
   padding: '12px 24px',
