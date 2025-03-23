@@ -29,9 +29,22 @@ function Footer() {
           </div>
         </div>
 
+        <div style={linksGridStyle}>
+
+            <Link to="/" style={linkStyle}>Home</Link>
+            <Link to="/about" style={linkStyle}>About</Link>
+            <Link to="/subteams" style={linkStyle}>Subteams</Link>
+            <Link to="/cars" style={linkStyle}>Cars</Link>
+   
+            <Link to="/news" style={linkStyle}>News</Link>
+            <Link to="/sponsors" style={linkStyle}>Sponsors</Link>
+            <Link to="/join" style={linkStyle}>Join Us</Link>
+            <Link to="/contact" style={linkStyle}>Contact</Link>
+        </div>
+
         {/* Right: Page Links and Buttons */}
         <div style={rightSectionStyle}>
-          <div style={linksGridStyle}>
+          {/* <div style={linksGridStyle}>
             <div>
               <Link to="/" style={linkStyle}>Home</Link>
               <Link to="/about" style={linkStyle}>About</Link>
@@ -44,7 +57,7 @@ function Footer() {
               <Link to="/join" style={linkStyle}>Join Us</Link>
               <Link to="/contact" style={linkStyle}>Contact</Link>
             </div>
-          </div>
+          </div> */}
 
           {/* Bottom Right Buttons */}
           <div style={buttonContainerStyle}>

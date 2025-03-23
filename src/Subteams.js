@@ -6,9 +6,13 @@ function Subteams() {
       {/* Hero */}
       <section style={heroSectionStyle}>
         <img src="/team.png" alt="Our Team" style={heroImageStyle} />
+        <div style={grayOverlayStyle}></div>
+
+
         <div style={overlayStyle}>
           <h1 style={heroHeadingStyle}>OUR TEAM</h1>
         </div>
+
       </section>
 
       {/* Team Intro */}
@@ -79,7 +83,9 @@ const heroImageStyle = {
   width: '100%',
   height: '100%',
   objectFit: 'cover',
+  objectPosition: 'center 80%', // 👈 Shows the bottom part
 };
+
 
 const overlayStyle = {
   position: 'absolute',
@@ -87,7 +93,9 @@ const overlayStyle = {
   left: '50%',
   transform: 'translate(-50%, -50%)',
   textAlign: 'center',
+  zIndex: 2, // 👈 above gray overlay
 };
+
 
 const heroHeadingStyle = {
   fontSize: '3rem',
@@ -166,5 +174,16 @@ const smallButtonStyle = {
   cursor: 'pointer',
   transition: 'all 0.3s ease-in-out',
 };
+
+const grayOverlayStyle = {
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  width: '100%',
+  height: '100%',
+  backgroundColor: 'rgba(0, 0, 0, 0.4)', // 👈 semi-transparent dark gray
+  zIndex: 1,
+};
+
 
 export default Subteams;
