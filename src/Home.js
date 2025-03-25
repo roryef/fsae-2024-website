@@ -1,7 +1,44 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 function Home() {
+
+  {/* Timer Calculations */}
+  const competitionDate = new Date("2025-06-01T06:30:00");
+
+  const calculateTimeLeft = () => {
+    const now = new Date();
+    const difference = competitionDate - now;
+
+    let timeLeft = {
+      days: '00',
+      hours: '00',
+      minutes: '00',
+      seconds: '00'
+    };
+
+    if (difference > 0) {
+      timeLeft = {
+        days: String(Math.floor(difference / (1000 * 60 * 60 * 24))).padStart(2, '0'),
+        hours: String(Math.floor((difference / (1000 * 60 * 60)) % 24)).padStart(2, '0'),
+        minutes: String(Math.floor((difference / 1000 / 60) % 60)).padStart(2, '0'),
+        seconds: String(Math.floor((difference / 1000) % 60)).padStart(2, '0'),
+      };
+    }
+
+    return timeLeft;
+  };
+
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <div style={pageStyle}>
       {/* Hero Section */}
@@ -22,6 +59,29 @@ function Home() {
             <Link to="/sponsors" style={donateButtonStyle}>DONATE</Link>
           </div>
 
+        </div>
+      </section>
+
+      {/* Countdown Section */}
+      <section style={countdownSectionStyle}>
+        <h2 style={countdownHeadingStyle}>COUNTDOWN TO COMPETITION</h2>
+        <div style={timerStyle}>
+          <div style={unitStyle}>
+            <span style={numberStyle}>{timeLeft.days}</span>
+            <span style={labelStyle}>Days</span>
+          </div>
+          <div style={unitStyle}>
+            <span style={numberStyle}>{timeLeft.hours}</span>
+            <span style={labelStyle}>Hours</span>
+          </div>
+          <div style={unitStyle}>
+            <span style={numberStyle}>{timeLeft.minutes}</span>
+            <span style={labelStyle}>Minutes</span>
+          </div>
+          <div style={unitStyle}>
+            <span style={numberStyle}>{timeLeft.seconds}</span>
+            <span style={labelStyle}>Seconds</span>
+          </div>
         </div>
       </section>
 
@@ -140,12 +200,6 @@ const headingStyle = {
   marginBottom: '20px',
 };
 
-// const buttonContainerStyle = {
-//   display: 'flex',
-//   gap: '20px',
-//   justifyContent: 'center',
-//   marginTop: '20px',
-// };
 
 const buttonStyle = {
   padding: '12px 24px',
@@ -165,11 +219,48 @@ const donateButtonStyle = {
   color: 'black',
 };
 
+/* countdown */
+const countdownSectionStyle = {
+  backgroundColor: 'black',
+  color: 'white',
+  textAlign: 'center',
+  padding: '250px 40px',
+};
+
+const countdownHeadingStyle = {
+  fontSize: '2rem',
+  fontWeight: 'bold',
+  marginBottom: '30px',
+};
+
+const timerStyle = {
+  display: 'flex',
+  justifyContent: 'center',
+  gap: '30px',
+  flexWrap: 'wrap',
+};
+
+const unitStyle = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+};
+
+const numberStyle = {
+  fontSize: '2.5rem',
+  fontWeight: 'bold',
+};
+
+const labelStyle = {
+  fontSize: '1rem',
+  marginTop: '5px',
+};
+
 /* stats */
 const statsSectionStyle = {
   position: 'relative',
   width: '100%',
-  height: '40vh',
+  height: '70vh',
   overflow: 'hidden',
 };
 
@@ -195,6 +286,7 @@ const statsOverlayStyle = {
   justifyContent: 'center',
   textAlign: 'center',
   color: 'white',
+  padding: '40px',
 };
 
 const statsHeadingStyle = {
