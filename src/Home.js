@@ -5,7 +5,6 @@ function Home() {
 
   {/* Timer Calculations */}
   const competitionDate = new Date("2025-06-01T06:30:00");
-
   const calculateTimeLeft = () => {
     const now = new Date();
     const difference = competitionDate - now;
@@ -16,7 +15,6 @@ function Home() {
       minutes: '00',
       seconds: '00'
     };
-
     if (difference > 0) {
       timeLeft = {
         days: String(Math.floor(difference / (1000 * 60 * 60 * 24))).padStart(2, '0'),
@@ -25,19 +23,50 @@ function Home() {
         seconds: String(Math.floor((difference / 1000) % 60)).padStart(2, '0'),
       };
     }
-
     return timeLeft;
   };
 
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
-
   useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
-
     return () => clearInterval(timer);
   }, []);
+
+  const cars = [
+    {
+      title: '2024–25 EV',
+      description: 'Coming Soon!',
+      image: '/2324-2.jpg',
+    },
+    {
+      title: '2023–24 EV',
+      description: 'Mid-engine electric platform built for precision and acceleration.',
+      image: '/2324-2.jpg',
+    },
+    {
+      title: '2022–23 EV',
+      description: 'Rear-engine combustion design with optimized suspension geometry.',
+      image: '/2324-2.jpg',
+    },
+    {
+      title: '2021–22 IC',
+      description: 'Rear-engine combustion design with optimized suspension geometry.',
+      image: '/2324-2.jpg',
+    },
+    {
+      title: '2020–21 IC',
+      description: 'First-gen EV prototype with custom drivetrain and telemetry.',
+      image: '/2324-2.jpg',
+    },
+    {
+      title: '2019–20 EV',
+      description: 'Lightweight chassis and track-ready aerodynamics.',
+      image: '/2324-2.jpg',
+    },
+  ];
+  
 
   {/* Page Sections */}
   return (
@@ -65,26 +94,37 @@ function Home() {
 
       {/* Countdown Section */}
       <section style={countdownSectionStyle}>
-        <h2 style={countdownHeadingStyle}>COUNTDOWN TO COMPETITION</h2>
-        <div style={timerStyle}>
-          <div style={unitStyle}>
-            <span style={numberStyle}>{timeLeft.days}</span>
-            <span style={labelStyle}>Days</span>
+        <div style={countdownContentWrapperStyle}>
+          {/* Left: Countdown */}
+          <div style={countdownLeftStyle}>
+            <h2 style={countdownHeadingStyle}>COUNTDOWN TO COMPETITION</h2>
+            <div style={timerStyle}>
+              <div style={unitStyle}>
+                <span style={numberStyle}>{timeLeft.days}</span>
+                <span style={labelStyle}>Days</span>
+              </div>
+              <div style={unitStyle}>
+                <span style={numberStyle}>{timeLeft.hours}</span>
+                <span style={labelStyle}>Hours</span>
+              </div>
+              <div style={unitStyle}>
+                <span style={numberStyle}>{timeLeft.minutes}</span>
+                <span style={labelStyle}>Minutes</span>
+              </div>
+              <div style={unitStyle}>
+                <span style={numberStyle}>{timeLeft.seconds}</span>
+                <span style={labelStyle}>Seconds</span>
+              </div>
+            </div>
           </div>
-          <div style={unitStyle}>
-            <span style={numberStyle}>{timeLeft.hours}</span>
-            <span style={labelStyle}>Hours</span>
-          </div>
-          <div style={unitStyle}>
-            <span style={numberStyle}>{timeLeft.minutes}</span>
-            <span style={labelStyle}>Minutes</span>
-          </div>
-          <div style={unitStyle}>
-            <span style={numberStyle}>{timeLeft.seconds}</span>
-            <span style={labelStyle}>Seconds</span>
+
+          {/* Right: Image Card */}
+          <div style={countdownImageCardStyle}>
+            <img src="/comp.jpg" alt="Last Year's Competition" style={countdownImageStyle} />
           </div>
         </div>
       </section>
+
 
       {/* Stats Section */}
       <section style={statsSectionStyle}>
@@ -102,24 +142,34 @@ function Home() {
 
       {/* Cars Section */}
       <section style={carsSectionStyle}>
-        <h2 style={sectionHeadingStyle}>EXPLORE OUR CARS</h2>
+        <h2 style={sectionTitleStyle}>OUR CARS</h2>
         <p style={sectionTextStyle}>
-          Each year, we dedicate ourselves to pushing the limits of performance and building the next 
-          generation of racecars. Explore our vehicles and click to learn more!
+          Explore some of our recent vehicles — each designed, built, and tested by Columbia students.
         </p>
-        
+
         <div style={carsGridStyle}>
-          {carData.map((car, index) => (
-            <div key={index} style={carCardStyle}>
-              <img src={car.image} alt={car.title} style={carImageStyle} />
-              <div style={carOverlayStyle}>
-                <h3 style={carTitleStyle}>{car.title}</h3>
-                <p style={carDescriptionStyle}>{car.description}</p>
-              </div>
+          {cars.map((car, i) => (
+            <div
+            key={i}
+            style={{
+              ...carCardStyle,
+              backgroundImage: `url(${car.image})`,
+            }}
+          >
+            {/* Gradient overlay */}
+            <div style={carOverlayStyle}></div>
+          
+            {/* Card content */}
+            <div style={carContentStyle}>
+              <div style={carTitleStyle}>{car.title}</div>
+              <div style={carDescStyle}>{car.description}</div>
             </div>
+          </div>
+          
           ))}
         </div>
       </section>
+
     </div>
   );
 }
@@ -208,13 +258,43 @@ const countdownSectionStyle = {
   backgroundColor: 'black',
   color: 'white',
   textAlign: 'center',
-  padding: '250px 40px',
+  padding: '150px 40px',
 };
 
 const countdownHeadingStyle = {
   fontSize: '2rem',
   fontWeight: 'bold',
   marginBottom: '30px',
+};
+
+const countdownContentWrapperStyle = {
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  flexWrap: 'wrap',
+  gap: '40px',
+  maxWidth: '1100px',
+  margin: '0 auto',
+};
+
+const countdownLeftStyle = {
+  flex: '1 1 300px',
+  minWidth: '280px',
+  textAlign: 'center',
+};
+
+const countdownImageCardStyle = {
+  flex: '1 1 500px',
+  maxWidth: '600px',
+  borderRadius: '12px',
+  overflow: 'hidden',
+  boxShadow: '0 4px 20px rgba(0,0,0,0.3)',
+};
+
+const countdownImageStyle = {
+  width: '100%',
+  height: '100%',
+  objectFit: 'cover',
 };
 
 const timerStyle = {
@@ -301,12 +381,7 @@ const smallButtonStyle = {
 };
 
 /* cars */
-const carsSectionStyle = {
-  textAlign: 'center',
-  padding: '50px 20px',
-};
-
-const sectionHeadingStyle = {
+const sectionTitleStyle = {
   fontSize: '2.5rem',
   fontWeight: 'bold',
   marginBottom: '20px',
@@ -319,65 +394,65 @@ const sectionTextStyle = {
   lineHeight: '1.6',
 };
 
+const carsSectionStyle = {
+  backgroundColor: 'black',
+  color: 'white',
+  padding: '80px 30px',
+  textAlign: 'center',
+};
+
 const carsGridStyle = {
   display: 'grid',
-  gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-  gap: '20px',
+  gridTemplateColumns: 'repeat(2, 1fr)',
+  gap: '40px',
   maxWidth: '1000px',
-  margin: '0 auto',
+  margin: '40px auto 0',
 };
 
 const carCardStyle = {
   position: 'relative',
-  borderRadius: '15px',
+  height: '400px',
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  borderRadius: '16px',
   overflow: 'hidden',
-  cursor: 'pointer',
-  background: '#1a1a1a',
-};
-
-const carImageStyle = {
-  width: '100%',
-  height: '100%',
-  objectFit: 'cover',
-  borderRadius: '15px',
-  transition: 'transform 0.3s ease-in-out',
+  boxShadow: '0 4px 20px rgba(0,0,0,0.3)',
 };
 
 const carOverlayStyle = {
   position: 'absolute',
   top: 0,
-  bottom: 0,
   left: 0,
+  height: '100%',
   width: '100%',
-  background: 'rgba(0, 0, 0, 0.4)',
+  background: `linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, transparent 35%, transparent 65%, rgba(0,0,0,0.5) 100%)`,
+  zIndex: 1,
+};
+
+const carContentStyle = {
+  position: 'relative',
+  zIndex: 2,
+  height: '100%',
   padding: '20px',
-  textAlign: 'center',
   display: 'flex',
   flexDirection: 'column',
-  alignItems: 'center',
-  justifyContent: 'center',
+  justifyContent: 'space-between',
 };
 
 const carTitleStyle = {
-  fontSize: '2rem',
+  fontSize: '1.6rem',
   fontWeight: 'bold',
   color: 'white',
-  marginBottom: '10px',
+  textShadow: '1px 1px 4px rgba(0,0,0,0.8)',
 };
 
-const carDescriptionStyle = {
-  fontSize: '1.2rem',
+const carDescStyle = {
+  fontSize: '1rem',
+  lineHeight: '1.4',
   color: 'white',
-  maxWidth: '80%',
-  textAlign: 'center',
+  textShadow: '1px 1px 4px rgba(0,0,0,0.8)',
 };
 
-const carData = [
-  { title: "2022-23 EV", description: "Small description here", image: "/Banana.jpg" },
-  { title: "2021-22 IC", description: "Small description here", image: "/Banana.jpg" },
-  { title: "2020-21 IC", description: "Small description here", image: "/Banana.jpg" },
-  { title: "2019-20 EV", description: "Small description here", image: "/Banana.jpg" },
-];
 
 
 export default Home;
