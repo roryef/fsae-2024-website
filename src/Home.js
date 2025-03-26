@@ -89,12 +89,12 @@ function Home() {
       <section style={statsSectionStyle}>
         <img src="/team_wide.png" alt="Team Stats" style={statsImageStyle} />
         <div style={statsOverlayStyle}>
-          <h2 style={statsHeadingStyle}>FOUNDED IN [DATE], WE’VE BUILT [X] CARS</h2>
-          <p style={statsTextStyle}>WE HAVE [X] MEMBERS AND [X] SPONSORS</p>
+          <h2 style={statsHeadingStyle}>COLUMBIA'S LARGEST ENGINEERING CLUB</h2>
+          <p style={statsTextStyle}>230 MEMBERS, 24 SPONSORS, 16 E-BOARD</p>
           <div style={statsButtonContainerStyle}>
-            <button style={smallButtonStyle}>ABOUT</button>
-            <button style={smallButtonStyle}>SPONSORS</button>
-            <button style={smallButtonStyle}>JOIN</button>
+            <Link to="/about" style={smallButtonStyle}>ABOUT</Link>
+            <Link to="/sponsors" style={smallButtonStyle}>SPONSORS</Link>
+            <Link to="/join" style={smallButtonStyle}>JOIN</Link>
           </div>
         </div>
       </section>
