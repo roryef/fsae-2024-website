@@ -15,22 +15,21 @@ function Footer() {
           <h3 style={socialsTitleStyle}>Follow Us</h3>
           <div style={socialsStyle}>
             <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-              <img src="/instagram.png" alt="Instagram" style={iconStyle} />
+              <img src="/logos/instagram.png" alt="Instagram" style={iconStyle} />
             </a>
             <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
-              <img src="/youtube.png" alt="YouTube" style={iconStyle} />
+              <img src="/logos/youtube.png" alt="YouTube" style={iconStyle} />
             </a>
             <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer">
-              <img src="/tiktok.png" alt="TikTok" style={iconStyle} />
+              <img src="/logos/tiktok.png" alt="TikTok" style={iconStyle} />
             </a>
             <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-              <img src="/linkedin.png" alt="LinkedIn" style={iconStyle} />
+              <img src="/logos/linkedin.png" alt="LinkedIn" style={iconStyle} />
             </a>
           </div>
         </div>
 
         <div style={linksGridStyle}>
-
             <Link to="/" style={linkStyle}>Home</Link>
             <Link to="/about" style={linkStyle}>About</Link>
             <Link to="/subteams" style={linkStyle}>Subteams</Link>
@@ -42,23 +41,7 @@ function Footer() {
             <Link to="/contact" style={linkStyle}>Contact</Link>
         </div>
 
-        {/* Right: Page Links and Buttons */}
         <div style={rightSectionStyle}>
-          {/* <div style={linksGridStyle}>
-            <div>
-              <Link to="/" style={linkStyle}>Home</Link>
-              <Link to="/about" style={linkStyle}>About</Link>
-              <Link to="/subteams" style={linkStyle}>Subteams</Link>
-              <Link to="/cars" style={linkStyle}>Cars</Link>
-            </div>
-            <div>
-              <Link to="/news" style={linkStyle}>News</Link>
-              <Link to="/sponsors" style={linkStyle}>Sponsors</Link>
-              <Link to="/join" style={linkStyle}>Join Us</Link>
-              <Link to="/contact" style={linkStyle}>Contact</Link>
-            </div>
-          </div> */}
-
           {/* Bottom Right Buttons */}
           <div style={buttonContainerStyle}>
             <Link to="/contact" style={buttonStyle}>Contact Us</Link>
@@ -70,7 +53,6 @@ function Footer() {
   );
 }
 
-// 🔹 Styles
 const footerStyle = {
   width: '100%',
   background: 'black',
