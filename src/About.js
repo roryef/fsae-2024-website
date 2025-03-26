@@ -88,9 +88,9 @@ function About() {
         <h2 style={sectionTitleStyle}>2025 BY THE NUMBERS</h2>
         <div style={statsGridStyle}>
             <StatCard end={230} label="Members" />
-            <StatCard end={23} label="Countries" />
+            <StatCard end={23} label="Nationalities" />
             <StatCard end={16} label="Majors" />
-            <StatCard end={16} label="E-Board" />
+            <StatCard end={16} label="E-Board Members" />
             <StatCard end={24} label="Sponsors" />
             <StatCard end={5} label="Seconds 0-60 MPH" suffix="s"/>
             <StatCard end={9} label="Increase in Club Involvement" prefix="x" />
