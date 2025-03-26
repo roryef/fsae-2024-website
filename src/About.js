@@ -22,12 +22,32 @@ function StatCard({ end, label, prefix }) {
 
 function About() {
     const eras = [
-  { title: "The Early Teams", years: "1997–2000", color: "#001f3f" }, 
-  { title: "The First Decade", years: "2000–2008", color: "#003366" },  
-  { title: "Superleggera", years: "2008–2019", color: "#336699" },       
-  { title: "CFR-21", years: "2019–2022", color: "#6699cc" },             
-  { title: "eCFR", years: "2022–Present", color: "#00C8FF" },            
-];
+        { title: "The Early Teams", years: "1997–2000", color: "#001f3f" }, 
+        { title: "The First Decade", years: "2000–2008", color: "#003366" },  
+        { title: "Superleggera", years: "2008–2019", color: "#336699" },       
+        { title: "CFR-21", years: "2019–2022", color: "#6699cc" },             
+        { title: "eCFR", years: "2022–Present", color: "#00C8FF" },            
+    ];
+
+    const subteams = [
+        { title: 'Electrical',
+        description: 'Low and high voltage EE projects for functionality, integration, and rules compliance of all electrical systems.',
+        image: '/team_wide.png',},
+        { title: 'Mechanical',
+        description: 'Dynamics, powertrain, controls, and other structural components for performance and safety.',
+        image: '/team_wide.png',},
+        { title: 'Admin',
+        description: 'Systems integration, project management, business, and PR to support the engineering team.',
+        image: '/eboard.jpg',},
+    ];
+
+    const eboard = Array.from({ length: 16 }).map((_, i) => ({
+        name: `Member ${i + 1}`,
+        title: `Title ${i + 1}`,
+        image: '/Banana.jpg',
+      }));
+      
+  
 
 
   return (
@@ -107,20 +127,41 @@ function About() {
 
 
       {/* Subteams */}
-      <section style={contentSectionStyle}>
-        <h2 style={sectionTitleStyle}>Subteams</h2>
-        <p style={sectionTextStyle}>
-          Our team is organized into subteams including Powertrain, Chassis, Controls, Business, and more—each contributing to different aspects of the car’s design, fabrication, and competition.
-        </p>
-      </section>
+      <section style={subteamsSectionStyle}>
+        <h2 style={sectionTitleStyle}>SUBTEAMS</h2>
+        <div style={subteamsWrapperStyle}>
+            {subteams.map((team, i) => (
+            <div
+                key={i}
+                style={{
+                ...subteamCardStyle,
+                backgroundImage: `url(${team.image})`,
+                }}
+            >
+                <div style={subteamOverlayStyle}>
+                <h3 style={subteamTitleStyle}>{team.title}</h3>
+                <p style={subteamDescStyle}>{team.description}</p>
+                </div>
+            </div>
+            ))}
+        </div>
+        </section>
+
 
       {/* E-Board */}
-      <section style={contentSectionStyle}>
-        <h2 style={sectionTitleStyle}>E-Board</h2>
-        <p style={sectionTextStyle}>
-          Our executive board oversees team operations, long-term goals, and strategic decisions. It includes the team captain, technical and business leads, and other core leadership roles.
-        </p>
-      </section>
+      <section style={eboardSectionStyle}>
+        <h2 style={sectionTitleStyle}>E-BOARD</h2>
+        <div style={eboardGridStyle}>
+            {eboard.map((member, i) => (
+            <div key={i} style={eboardCardStyle}>
+                <img src={member.image} alt={member.name} style={eboardImageStyle} />
+                <div style={eboardNameStyle}>{member.name}</div>
+                <div style={eboardTitleStyle}>{member.title}</div>
+            </div>
+            ))}
+        </div>
+        </section>
+
     </div>
   );
 }
@@ -301,17 +342,106 @@ const pageStyle = {
     margin: '0 5px',
   };
   
-  
-  
-  
-  
-    
-  const contentSectionStyle = {
-    padding: '60px 30px',
-    maxWidth: '1000px',
-    margin: '0 auto',
+  //subteams
+  const subteamsSectionStyle = {
+    backgroundColor: 'black',
+    color: 'white',
+    padding: '80px 30px',
     textAlign: 'center',
   };
+  
+  const subteamsWrapperStyle = {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    gap: '40px',
+    flexWrap: 'wrap', 
+    maxWidth: '1200px',
+    margin: '0 auto',
+  };
+  
+  
+  const subteamCardStyle = {
+    position: 'relative',
+    width: '100%',
+    maxWidth: '400px',
+    flex: '1 1 300px',
+    height: '250px',
+    borderRadius: '12px',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    overflow: 'hidden',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  };
+  
+  const subteamOverlayStyle = {
+    backgroundColor: 'rgba(0, 0, 0, 0.6)',
+    width: '100%',
+    height: '100%',
+    padding: '30px',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    textAlign: 'center',
+  };
+  
+  const subteamTitleStyle = {
+    fontSize: '1.8rem',
+    fontWeight: 'bold',
+    marginBottom: '10px',
+  };
+  
+  const subteamDescStyle = {
+    fontSize: '1.05rem',
+    lineHeight: '1.5',
+  };
+  
+  
+  //eboard
+  const eboardSectionStyle = {
+    backgroundColor: 'black',
+    color: 'white',
+    padding: '80px 30px',
+    textAlign: 'center',
+  };
+  
+  const eboardGridStyle = {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(4, 1fr)', // 4 columns
+    gap: '40px',
+    maxWidth: '1100px',
+    margin: '0 auto',
+  };
+  
+  const eboardCardStyle = {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    textAlign: 'center',
+  };
+  
+  const eboardImageStyle = {
+    width: '100%',
+    maxWidth: '180px',
+    height: '240px',
+    objectFit: 'cover',
+    borderRadius: '12px',
+    marginBottom: '12px',
+  };
+  
+  const eboardNameStyle = {
+    fontSize: '1.1rem',
+    fontWeight: 'bold',
+    marginBottom: '4px',
+  };
+  
+  const eboardTitleStyle = {
+    fontSize: '0.95rem',
+    color: '#ccc',
+  };
+  
   
   const sectionTitleStyle = {
     fontSize: '2rem',
