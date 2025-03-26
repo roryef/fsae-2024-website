@@ -21,6 +21,15 @@ function StatCard({ end, label, prefix }) {
   }
 
 function About() {
+    const eras = [
+  { title: "The Early Teams", years: "1997–2000", color: "#001f3f" }, 
+  { title: "The First Decade", years: "2000–2008", color: "#003366" },  
+  { title: "Superleggera", years: "2008–2019", color: "#336699" },       
+  { title: "CFR-21", years: "2019–2022", color: "#6699cc" },             
+  { title: "eCFR", years: "2022–Present", color: "#00C8FF" },            
+];
+
+
   return (
     <div style={pageStyle}>
       {/* Hero */}
@@ -47,14 +56,16 @@ function About() {
         <div style={sideBySideColumnStyle}>
           <h2 style={sectionTitleStyle}>OUR MISSION</h2>
           <p style={sectionTextStyle}>
-            Our mission is to educate and develop the next generation of engineers through real-world project experience, teamwork, and innovation. We strive to push the boundaries of electric vehicle technology and cultivate a strong, inclusive engineering community.
+            Our mission is to educate and develop the next generation of engineers through real-world project experience, 
+            teamwork, and innovation. We strive to push the boundaries of electric vehicle technology and cultivate a strong, 
+            inclusive engineering community.
           </p>
         </div>
       </section>
 
       {/* By the Numbers */}
       <section style={numbersSectionStyle}>
-        <h2 style={sectionTitleStyle}>OUR PAST YEAR BY THE NUMBERS</h2>
+        <h2 style={sectionTitleStyle}>2025 BY THE NUMBERS</h2>
         <div style={statsGridStyle}>
             <StatCard end={230} label="Members" />
             <StatCard end={23} label="Countries" />
@@ -63,18 +74,37 @@ function About() {
             <StatCard end={24} label="Sponsors" />
             <StatCard end={5} label="Seconds 0-60 MPH" suffix="s"/>
             <StatCard end={9} label="Increase in Club Involvement" prefix="x" />
-            <StatCard end={5000} label="Costs Cut" prefix="$" />
+            <StatCard end={5000} label="Savings" prefix="$" />
         </div>
         </section>
 
 
       {/* Team History */}
-      <section style={contentSectionStyle}>
-        <h2 style={sectionTitleStyle}>TEAM HISTORY</h2>
-        <p style={sectionTextStyle}>
-          Since our founding, Columbia FSAE has evolved from a small group of student engineers into a competitive racing team. We've grown in size, scope, and capability each year—building faster, smarter electric vehicles with every iteration. Our cars represent not just technical advancement, but the teamwork and tenacity of our members.
+      <section style={historySectionStyle}>
+        <h2 style={historyTitleStyle}>TEAM HISTORY</h2>
+        <p style={historyTextStyle}>
+        Columbia FSAE has a rich legacy that spans over two decades, evolving through multiple eras of innovation,
+        learning, and engineering excellence. Originally an internal combustion team, we began transitioning to electric 
+        in 2022 — and today, we’re proud to be fully electric. Explore the major chapters 
+        in our journey from garage-built racers to nationally competitive EVs.
         </p>
-      </section>
+
+        <div style={timelineWrapperStyle}>
+            {eras.map((era, i) => (
+            <React.Fragment key={i}>
+                <div style={{ ...timelineBlockStyle, backgroundColor: era.color }}>
+                <div style={blockTextContainerStyle}>
+                    <div style={blockTitleStyle}>{era.title}</div>
+                    <div style={blockYearsStyle}>{era.years}</div>
+                </div>
+                </div>
+                {i < eras.length - 1 && <div style={dividerLineStyle}></div>}
+            </React.Fragment>
+            ))}
+        </div>
+        </section>
+
+
 
       {/* Subteams */}
       <section style={contentSectionStyle}>
@@ -174,7 +204,7 @@ const pageStyle = {
   
   const statsGridStyle = {
     display: 'grid',
-    gridTemplateColumns: 'repeat(4, 1fr)', // 🔁 Exactly 4 columns
+    gridTemplateColumns: 'repeat(4, 1fr)', //4 columns
     gap: '30px',
     marginTop: '40px',
     maxWidth: '1100px',
@@ -188,10 +218,10 @@ const pageStyle = {
     borderRadius: '12px',
     boxShadow: '0 4px 10px rgba(0,0,0,0.3)',
     display: 'flex',
-    flexDirection: 'row',      // 🔁 Horizontal layout
+    flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: '20px',                // ➕ Space between number and label
+    gap: '20px',
     minHeight: '100px',
   };
   
@@ -205,6 +235,70 @@ const pageStyle = {
     fontSize: '1.1rem',
     color: 'white',
     textAlign: 'left',
+  };
+  
+  //history
+  const historySectionStyle = {
+    backgroundColor: 'black',
+    color: 'white',
+    padding: '80px 30px',
+    textAlign: 'center',
+  };
+  
+  const historyTitleStyle = {
+    fontSize: '2.5rem',
+    fontWeight: 'bold',
+    marginBottom: '20px',
+  };
+  
+  const historyTextStyle = {
+    maxWidth: '800px',
+    margin: '0 auto 60px auto',
+    fontSize: '1.1rem',
+    lineHeight: '1.6',
+  };
+  
+  const timelineWrapperStyle = {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexWrap: 'wrap',
+    gap: '0px',
+  };
+  
+  const timelineBlockStyle = {
+    width: '180px',
+    height: '100px',
+    borderRadius: '10px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'column',
+    color: 'white',
+    padding: '10px',
+    boxSizing: 'border-box',
+  };
+  
+  const blockTextContainerStyle = {
+    textAlign: 'center',
+  };
+  
+  const blockTitleStyle = {
+    fontSize: '1rem',
+    fontWeight: 'bold',
+  };
+  
+  const blockYearsStyle = {
+    fontSize: '0.9rem',
+    marginTop: '4px',
+    opacity: 0.9,
+  };
+  
+  const dividerLineStyle = {
+    width: '20px',
+    height: '2px',
+    backgroundColor: '#888',
+    margin: '0 5px',
   };
   
   

@@ -39,6 +39,7 @@ function Home() {
     return () => clearInterval(timer);
   }, []);
 
+  {/* Page Sections */}
   return (
     <div style={pageStyle}>
       {/* Hero Section */}
@@ -99,29 +100,12 @@ function Home() {
         </div>
       </section>
 
-
-      {/* Mission Section */}
-      <section style={missionSectionStyle}>
-        <h2 style={missionHeadingStyle}>OUR MISSION</h2>
-        <p style={missionTextStyle}>
-          Our mission is to educate and develop the next generation of engineers and managers 
-          while building a racecar for the Formula SAE competition. The design, construction, and 
-          financing of the car provides students with an introduction to all aspects of project and 
-          engineering management. By applying theoretical principles to real-world problems, team 
-          members develop collaborative problem-solving skills.
-        </p>
-        <div style={imageContainerStyle}>
-          <img src="/Banana.jpg" alt="Team" style={missionImageStyle} />
-          <img src="/Banana.jpg" alt="Team" style={missionImageStyle} />
-        </div>
-      </section>
-
       {/* Cars Section */}
       <section style={carsSectionStyle}>
-        <h2 style={sectionHeadingStyle}>OUR CARS</h2>
+        <h2 style={sectionHeadingStyle}>EXPLORE OUR CARS</h2>
         <p style={sectionTextStyle}>
           Each year, we dedicate ourselves to pushing the limits of performance and building the next 
-          generation of racecars. Explore our past vehicles here and click to learn more!
+          generation of racecars. Explore our vehicles and click to learn more!
         </p>
         
         <div style={carsGridStyle}>
@@ -314,39 +298,6 @@ const smallButtonStyle = {
   color: 'white',
   fontSize: '16px',
   cursor: 'pointer',
-};
-
-/* mission */
-const missionSectionStyle = {
-  background: 'black',
-  color: 'white',
-  padding: '80px 20px',
-  textAlign: 'center',
-};
-
-const missionHeadingStyle = {
-  fontSize: '2.5rem',
-  fontWeight: 'bold',
-  marginBottom: '20px',
-};
-
-const missionTextStyle = {
-  fontSize: '1.2rem',
-  maxWidth: '800px',
-  margin: '0 auto',
-};
-
-const imageContainerStyle = {
-  display: 'flex',
-  justifyContent: 'center',
-  gap: '20px',
-  marginTop: '40px',
-};
-
-const missionImageStyle = {
-  width: '300px',
-  height: 'auto',
-  borderRadius: '10px',
 };
 
 /* cars */
