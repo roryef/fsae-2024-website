@@ -209,7 +209,43 @@ function About() {
             </div>
             ))}
         </div>
-        </section>
+      </section>
+
+      {/* Faculty Advisors */}
+      <section style={eboardSectionStyle}>
+        <h2 style={sectionTitleStyle}>Faculty Advisors</h2>
+        <div style={facGridStyle}>
+            {[
+            {
+                name: 'Jeffrey Kysar',
+                link: 'https://www.me.columbia.edu/faculty/jeffrey-kysar',
+                title: 'Professor and Chair of Mechanical Engineering',
+                image: '/headshots/Kysar.jpg',
+            },
+            {
+                name: 'Josh Browne',
+                link: 'https://www.me.columbia.edu/joshua-browne',
+                title: 'Adjunct Professor of Mechanical Engineering',
+                image: '/headshots/Browne.jpg',
+            },
+            {
+                name: 'Matthias Preindl',
+                link: 'https://www.ee.columbia.edu/matthias-preindl',
+                title: 'Associate Professor of Electrical Engineering',
+                image: '/headshots/Preindl.jpg',
+            }
+            ].map((advisor, i) => (
+            <div key={i} style={eboardCardStyle}>
+                <img src={advisor.image} alt={advisor.name} style={eboardImageStyle} />
+                <a href={advisor.link} target="_blank" rel="noopener noreferrer" style={facNameStyle}>
+                {advisor.name}
+                </a>
+                <p style={facTitleStyle}>{advisor.title}</p>
+            </div>
+            ))}
+        </div>
+      </section>
+
     </div>
   );
 }
@@ -544,11 +580,40 @@ const pageStyle = {
     color: '#ccc',
   };
   
+  //faculty
+  const facGridStyle = {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(3, 1fr)', // 3 columns
+    gap: '40px',
+    maxWidth: '1100px',
+    margin: '0 auto',
+  };
+
+  const facNameStyle = {
+    fontSize: '1.1rem',
+    fontWeight: 'bold',
+    color: 'white',
+    textDecoration: 'none',
+    border: '1px solid white',
+    borderRadius: '8px',
+    padding: '6px 10px',
+    marginTop: '10px',
+    marginBottom: '6px',
+    display: 'inline-block',
+  };
+  
+  const facTitleStyle = {
+    fontSize: '0.95rem',
+    lineHeight: '1.4',
+    marginBottom: '6px',
+    color: '#ccc',
+  };
+  
   
   const sectionTitleStyle = {
     fontSize: '2rem',
     fontWeight: 'bold',
-    marginBottom: '20px',
+    marginBottom: '30px',
   };
   
   const sectionTextStyle = {
