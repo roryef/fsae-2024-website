@@ -26,7 +26,7 @@ function About() {
         { title: "The First Decade", years: "2000–2008", color: "#003366" },  
         { title: "Superleggera", years: "2008–2019", color: "#336699" },       
         { title: "CFR-21", years: "2019–2022", color: "#6699cc" },             
-        { title: "eCFR", years: "2022–Present", color: "#66ccff" },            
+        { title: "eCFR", years: "2022–Present", color: "#91b4d1" },            
     ];
 
     const subteams = [
@@ -96,41 +96,7 @@ function About() {
         </div>
       </section>
 
-      {/* What We Do */}
-      <section style={engagementSectionStyle}>
-        <h2 style={sectionTitleStyle}>WHAT WE DO</h2>
-        <div style={engagementGridStyle}>
-            {/* First Row */}
-            <div style={engagementRowStyle}>
-            {[
-                { title: 'Engineering', desc: 'Design and build an electric race car, then test drive and tune it to perfection.', bg: '#001f3f' },
-                { title: 'Learning', desc: 'Develop core engineering skills, collaborate in teams, and solve real-world challenges.', bg: '#003366' },
-                { title: 'Career Development', desc: 'Attend alumni recruiting events and connect with sponsors at competition.', bg: '#336699' },
-            ].map((item, i) => (
-                <div key={i} style={{ ...engagementCardStyle, backgroundColor: item.bg }}>
-                <div style={cardContentStyle}>
-                    <h3 style={cardTitleStyle}>{item.title}</h3>
-                    <p style={{ ...cardTextStyle, }}>{item.desc}</p>
-                </div>
-                </div>
-            ))}
-            </div>
-            {/* Second Row */}
-            <div style={engagementRowStyle}>
-            {[
-                { title: 'Outreach', desc: 'Secure sponsorships, attend SAE events, and collaborate with teams worldwide.', bg: '#6699cc' },
-                { title: 'Competition', desc: 'Race in June at Michigan International Speedway alongside over 70 international teams.', bg: '#66ccff' },
-            ].map((item, i) => (
-                <div key={i} style={{ ...engagementCardStyle, backgroundColor: item.bg }}>
-                <div style={cardContentStyle}>
-                    <h3 style={cardTitleStyle}>{item.title}</h3>
-                    <p style={{ ...cardTextStyle, }}>{item.desc}</p>
-                </div>
-                </div>
-            ))}
-            </div>
-        </div>
-        </section>
+      
 
       {/* By the Numbers */}
       <section style={numbersSectionStyle}>
@@ -148,32 +114,41 @@ function About() {
         </section>
 
 
-      {/* Team History */}
-      <section style={historySectionStyle}>
-        <h2 style={historyTitleStyle}>TEAM HISTORY</h2>
-        <p style={historyTextStyle}>
-        Columbia FSAE has a rich legacy that spans over two decades, evolving through multiple eras of innovation,
-        learning, and engineering excellence. Originally an internal combustion team, we began transitioning to electric 
-        in 2022 — and today, we’re proud to be fully electric. Explore the major chapters 
-        in our journey from garage-built racers to nationally competitive EVs.
-        </p>
-
-        <div style={timelineWrapperStyle}>
-            {eras.map((era, i) => (
-            <React.Fragment key={i}>
-                <div style={{ ...timelineBlockStyle, backgroundColor: era.color }}>
-                <div style={blockTextContainerStyle}>
-                    <div style={blockTitleStyle}>{era.title}</div>
-                    <div style={blockYearsStyle}>{era.years}</div>
+      {/* What We Do
+      <section style={engagementSectionStyle}>
+        <h2 style={sectionTitleStyle}>WHAT WE DO</h2>
+        <div style={engagementGridStyle}>
+            
+            <div style={engagementRowStyle}>
+            {[
+                { title: 'Engineering', desc: 'Design and build an electric race car, then test drive and tune it to perfection.', bg: '#001f3f' },
+                { title: 'Learning', desc: 'Develop core engineering skills, collaborate in teams, and solve real-world challenges.', bg: '#003366' },
+                { title: 'Career Development', desc: 'Attend alumni recruiting events and connect with sponsors at competition.', bg: '#336699' },
+            ].map((item, i) => (
+                <div key={i} style={{ ...engagementCardStyle, backgroundColor: item.bg }}>
+                <div style={cardContentStyle}>
+                    <h3 style={cardTitleStyle}>{item.title}</h3>
+                    <p style={{ ...cardTextStyle, }}>{item.desc}</p>
                 </div>
                 </div>
-                {i < eras.length - 1 && <div style={dividerLineStyle}></div>}
-            </React.Fragment>
             ))}
+            </div>
+            
+            <div style={engagementRowStyle}>
+            {[
+                { title: 'Outreach', desc: 'Secure sponsorships, attend SAE events, and collaborate with teams worldwide.', bg: '#91b4d1' }, //
+                { title: 'Competition', desc: 'Race in June at Michigan International Speedway with over 70 international teams.', bg: '#6699cc' },
+            ].map((item, i) => (
+                <div key={i} style={{ ...engagementCardStyle, backgroundColor: item.bg }}>
+                <div style={cardContentStyle}>
+                    <h3 style={cardTitleStyle}>{item.title}</h3>
+                    <p style={{ ...cardTextStyle, }}>{item.desc}</p>
+                </div>
+                </div>
+            ))}
+            </div>
         </div>
-        </section>
-
-
+        </section> */}
 
       {/* Subteams */}
       <section style={subteamsSectionStyle}>
@@ -194,8 +169,33 @@ function About() {
             </div>
             ))}
         </div>
-        </section>
+        </section>  
 
+
+      {/* Team History */}
+      <section style={historySectionStyle}>
+        <h2 style={sectionTitleStyle}>TEAM HISTORY</h2>
+        <p style={historyTextStyle}>
+        Columbia FSAE has a rich legacy that spans over two decades, evolving through multiple eras of innovation,
+        learning, and engineering excellence. Originally an internal combustion team, we began transitioning to electric 
+        in 2022, and today, we’re proud to be fully electric. Explore the major chapters 
+        in our journey from garage-built racers to internationally competitive EVs.
+        </p>
+
+        <div style={timelineWrapperStyle}>
+            {eras.map((era, i) => (
+            <React.Fragment key={i}>
+                <div style={{ ...timelineBlockStyle, backgroundColor: era.color }}>
+                <div style={blockTextContainerStyle}>
+                    <div style={blockTitleStyle}>{era.title}</div>
+                    <div style={blockYearsStyle}>{era.years}</div>
+                </div>
+                </div>
+                {i < eras.length - 1 && <div style={dividerLineStyle}></div>}
+            </React.Fragment>
+            ))}
+        </div>
+        </section>
 
       {/* E-Board */}
       <section style={eboardSectionStyle}>
@@ -272,7 +272,7 @@ const pageStyle = {
     width: '100%',
     height: '100%',
     objectFit: 'cover',
-    objectPosition: 'center 80%', 
+    objectPosition: 'center 90%', 
   };
   
   const overlayStyle = {
@@ -425,7 +425,7 @@ const pageStyle = {
   };
   
   const historyTitleStyle = {
-    fontSize: '2.5rem',
+    fontSize: '1.8rem',
     fontWeight: 'bold',
     marginBottom: '20px',
   };
