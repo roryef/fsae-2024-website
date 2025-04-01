@@ -38,32 +38,32 @@ function Home() {
     {
       title: '2024–25 EV',
       description: 'Coming Soon!',
-      image: '/2324-2.jpg',
+      image: '/car/2324-2.jpg',
     },
     {
       title: '2023–24 EV',
       description: 'Mid-engine electric platform built for precision and acceleration.',
-      image: '/2324-2.jpg',
+      image: '/car/2324-2.jpg',
     },
     {
       title: '2022–23 EV',
       description: 'Rear-engine combustion design with optimized suspension geometry.',
-      image: '/2324-2.jpg',
+      image: '/car/2324-2.jpg',
     },
     {
       title: '2021–22 IC',
       description: 'Rear-engine combustion design with optimized suspension geometry.',
-      image: '/2324-2.jpg',
+      image: '/car/2324-2.jpg',
     },
     {
       title: '2020–21 IC',
       description: 'First-gen EV prototype with custom drivetrain and telemetry.',
-      image: '/2324-2.jpg',
+      image: '/car/2324-2.jpg',
     },
     {
       title: '2019–20 EV',
       description: 'Lightweight chassis and track-ready aerodynamics.',
-      image: '/2324-2.jpg',
+      image: '/car/2324-2.jpg',
     },
   ];
   
