@@ -1,0 +1,317 @@
+/* Global */
+.page {
+    width: 100%;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* object-position: center 90%; */
+  }
+  
+  .gray-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+  }
+  
+  .hero-heading {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  /* Side-by-Side (Who We Are & Our Mission) */
+  .side-by-side-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  .side-by-side-column {
+    flex: 1 1 400px;
+    min-width: 300px;
+  }
+  
+  /* Section Title & Text */
+  .section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  .section-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  /* Numbers Section */
+  .numbers-section {
+    background-color: #111;
+    /* background-image: url("/carbon-fiber.png"); */
+    background-size: cover;
+    background-position: center;
+    padding: 80px 30px;
+    text-align: center;
+    color: white;
+  }
+  
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Stat Card */
+  .stat-card {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    min-height: 100px;
+  }
+  
+  .stat-number {
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #00C8FF;
+  }
+  
+  .stat-label {
+    font-size: 1.1rem;
+    color: white;
+    text-align: left;
+  }
+  
+  /* History Section */
+  .history-section {
+    background-color: black;
+    color: white;
+    padding: 80px 30px;
+    text-align: center;
+  }
+  
+  .history-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .history-text {
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  .timeline-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0px;
+  }
+  
+  .timeline-block {
+    width: 180px;
+    height: 100px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .block-text-container {
+    text-align: center;
+  }
+  
+  .block-title {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .block-years {
+    font-size: 0.9rem;
+    margin-top: 4px;
+    opacity: 0.9;
+  }
+  
+  .divider-line {
+    width: 20px;
+    height: 2px;
+    background-color: #888;
+    margin: 0 5px;
+  }
+  
+  /* Subteams Section */
+  .subteams-section {
+    background-color: black;
+    color: white;
+    padding: 80px 30px;
+    text-align: center;
+  }
+  
+  .subteams-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .subteam-card {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    flex: 1 1 300px;
+    height: 250px;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .subteam-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .subteam-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .subteam-desc {
+    font-size: 1.05rem;
+    line-height: 1.5;
+  }
+  
+  /* E-Board Section */
+  .eboard-section {
+    background-color: black;
+    color: white;
+    padding: 80px 30px;
+    text-align: center;
+  }
+  
+  .eboard-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .eboard-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .eboard-image {
+    width: 100%;
+    max-width: 220px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 12px;
+  }
+  
+  .eboard-name {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+  
+  .eboard-title {
+    font-size: 0.95rem;
+    color: #ccc;
+  }
+  
+  /* Faculty Advisors */
+  .fac-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .fac-name {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 6px 10px;
+    margin-top: 10px;
+    margin-bottom: 6px;
+    display: inline-block;
+  }
+  
+  .fac-title {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin-bottom: 6px;
+    color: #ccc;
+  }
+  

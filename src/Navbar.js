@@ -63,7 +63,7 @@ function Navbar() {
   return (
     <nav className="navbar">
       <Link to="/" className="navbar-logo">
-        <img src="/LogoWhite.png" alt="Logo" />
+        <img src="/logos/LogoWhite.png" alt="Logo" />
       </Link>
       <div className="navbar-links">
         <Link to="/" className="nav-link">Home</Link>

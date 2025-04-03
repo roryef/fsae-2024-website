@@ -71,12 +71,12 @@ function Home() {
       {/* Hero Section */}
       <section className="hero-section">
         <video autoPlay loop muted playsInline className="hero-video">
-          <source src="/hero_short.mov" type="video/mp4" />
+          <source src="/car/hero_short.mov" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="hero-overlay"></div>
         <div className="overlay-content">
-          <img src="/LogoWhite.png" alt="Logo" className="logo" />
+          <img src="/logos/LogoWhite.png" alt="Logo" className="logo" />
           <h1 className="heading">Columbia University Formula Racing</h1>
           <div className="stats-button-container">
             <Link to="/join" className="button">JOIN US</Link>
@@ -112,14 +112,14 @@ function Home() {
           </div>
           {/* Right: Image Card */}
           <div className="countdown-image-card">
-            <img src="/comp.jpg" alt="Last Year's Competition" className="countdown-image" />
+            <img src="/groups/comp.jpg" alt="Last Year's Competition" className="countdown-image" />
           </div>
         </div>
       </section>
 
       {/* Stats Section */}
       <section className="stats-section">
-        <img src="/team_wide.png" alt="Team Stats" className="stats-image" />
+        <img src="/groups/team_wide.png" alt="Team Stats" className="stats-image" />
         <div className="stats-overlay">
           <h2 className="stats-heading">COLUMBIA'S LARGEST ENGINEERING CLUB</h2>
           <p className="stats-text">230 MEMBERS, 24 SPONSORS, 16 E-BOARD</p>
