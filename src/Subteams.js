@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Subteams() {
   return (
@@ -101,9 +102,9 @@ function Subteams() {
 
       {/* Buttons */}
       <section style={buttonsSectionStyle}>
-        <button style={smallButtonStyle}>JOIN</button>
-        <button style={smallButtonStyle}>SPONSORS</button>
-        <button style={smallButtonStyle}>CONTACT</button>
+        <Link to="/join" style={smallButtonStyle}>JOIN US</Link>
+        <Link to="/sponsors" style={smallButtonStyle}>SPONSORS</Link>
+        <Link to="/join" style={smallButtonStyle}>CONTACT</Link>
       </section>
     </div>
   );

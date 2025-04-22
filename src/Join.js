@@ -1,50 +1,62 @@
 import React from 'react';
+import './Join.css';
 
 function Join() {
   return (
-    <div style={pageStyle}>
-      <h1 style={headingStyle}>Join Columbia Formula Racing</h1>
-      <p style={textStyle}>
-        Become a part of our team and gain hands-on experience in building a Formula SAE race car.
-        Whether you're interested in engineering, business, or marketing, there's a place for you!
-      </p>
-      <button style={applyButtonStyle}>Join Now</button>
+    <div className="join-page">
+      {/* Hero Section */}
+      <section className="join-hero">
+        <img src="/groups/team.png" alt="Team Hero" className="join-hero-image" />
+        <div className="join-hero-overlay">
+          <h1 className="join-hero-title">JOIN US</h1>
+        </div>
+      </section>
+
+      {/* Invitation Section */}
+      <section className="join-intro">
+        <h2 className="join-intro-heading">Ready to Build, Drive, and Compete?</h2>
+        <p className="join-intro-text">
+          We welcome students from all majors and backgrounds — no experience required. Whether you’re into 
+          engineering, design, business, or simply love racing, there's a place for you on our team.
+        </p>
+        <a 
+          href="https://linktr.ee/cufr_onboarding" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="join-linktree"
+        >
+          View Opportunities & Resources
+        </a>
+      </section>
+
+      <section className="team-photo-section">
+        <h2 className="team-photo-heading">Life on the Team</h2>
+        <div className="team-photo-grid">
+          <div className="photo-card">
+            <img src="/car/test.jpg" alt="Testing" />
+            <p className="caption">Testing</p>
+          </div>
+          <div className="photo-card">
+            <img src="/groups/comp.jpg" alt="Race Day at Michigan" />
+            <p className="caption">Race Day at Michigan</p>
+          </div>
+          <div className="photo-card">
+            <img src="/groups/eboard.jpg" alt="E-Board" />
+            <p className="caption">E-Board</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="join-contact">
+        <p className="join-contact-text">Questions? We’d love to hear from you.</p>
+        <a href="mailto:fsae@columbia.edu" className="join-button">
+          Contact Us
+        </a>
+      </section>
+
     </div>
   );
 }
-
-const pageStyle = {
-  textAlign: 'center',
-  padding: '80px 20px',
-  backgroundColor: 'black',
-  color: 'white',
-  minHeight: '100vh',
-};
-
-const headingStyle = {
-  fontSize: '2.5rem',
-  fontWeight: 'bold',
-  marginBottom: '20px',
-};
-
-const textStyle = {
-  fontSize: '1.2rem',
-  maxWidth: '700px',
-  margin: '0 auto',
-  lineHeight: '1.6',
-};
-
-const applyButtonStyle = {
-  padding: '12px 24px',
-  border: '2px solid white',
-  borderRadius: '30px',
-  fontSize: '18px',
-  fontWeight: 'bold',
-  background: 'transparent',
-  color: 'white',
-  cursor: 'pointer',
-  transition: 'all 0.3s ease-in-out',
-  marginTop: '20px',
-};
 
 export default Join;

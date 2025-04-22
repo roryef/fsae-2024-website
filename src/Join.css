@@ -1,0 +1,140 @@
+.join-page {
+    background-color: black;
+    color: white;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .join-hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .join-hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 60%;
+  }
+  
+  .join-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .join-hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .join-intro {
+    text-align: center;
+    padding: 80px 30px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .join-intro-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .join-intro-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 50px;
+  }
+  
+  .join-linktree {
+    padding: 10px 15px;
+    border: 2px solid white;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    transition: all 0.3s ease;
+  }
+  
+  .join-linktree:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  .join-contact {
+    text-align: center;
+    padding: 60px 30px;
+  }
+  
+  .join-contact-text {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  .join-contact-button {
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 25px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .join-contact-button:hover {
+    background-color: white;
+    color: black;
+  }
+
+  .team-photo-section {
+    background-color: black;
+    color: white;
+    padding: 80px 30px;
+    text-align: center;
+  }
+  
+  .team-photo-heading {
+    font-size: 2rem;
+    /* font-weight: bold; */
+    margin-bottom: 40px;
+  }
+  
+  .team-photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 50px;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  
+  .photo-card {
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #111;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  }
+  
+  .photo-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+  
+  .caption {
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-style: italic;
+    color: #ccc;
+  }
+  
+  

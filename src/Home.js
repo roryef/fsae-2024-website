@@ -131,7 +131,7 @@ function Home() {
         </div>
       </section>
 
-      {/* Cars Section */}
+      {/* Cars Section
       <section className="cars-section">
         <h2 className="section-title">OUR CARS</h2>
         <p className="section-text">
@@ -152,11 +152,9 @@ function Home() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
 
 export default Home;
-
-

@@ -5,7 +5,7 @@ function Cars() {
     <div style={pageStyle}>
       <h1 style={headingStyle}>Our Cars</h1>
       <p style={textStyle}>
-        Explore our past and present vehicles and the innovations we bring to Formula SAE.
+        COMING SOON
       </p>
     </div>
   );
