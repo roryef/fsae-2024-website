@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Columbia FSAE",
+  "name": "Columbia FSAE",
   "icons": [
     {
       "src": "favicon.ico",
@@ -18,7 +18,7 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "https://columbiafsae.github.io/fsae-2024-website",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
