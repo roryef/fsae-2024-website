@@ -21,7 +21,7 @@ const sponsors = [
   { name: 'Columbia ME', url: 'https://www.me.columbia.edu/', image: `${process.env.PUBLIC_URL}/sponsors/CU_ME.png` },
   { name: 'Columbia EE', url: 'https://www.ee.columbia.edu/', image: `${process.env.PUBLIC_URL}/sponsors/CU_EE.png` },
   { name: 'Columbia Makerspace', url: 'https://make.columbia.edu/', image: `${process.env.PUBLIC_URL}/sponsors/CU_MS.png` },
-  { name: 'Columbia Facilities', url: 'https://cufo.columbia.edu/', image: `${process.env.PUBLIC_URL}/sponsors/CU_fac.png` },
+  { name: 'Columbia Facilities', url: 'https://cufo.columbia.edu/', image: `${process.env.PUBLIC_URL}/sponsors/CU_FAC.png` },
 ];
 
 function Sponsors() {

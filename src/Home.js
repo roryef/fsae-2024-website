@@ -80,7 +80,7 @@ function Home() {
           <h1 className="heading">Columbia University Formula Racing</h1>
           <div className="stats-button-container">
             <Link to="/join" className="button">JOIN US</Link>
-            <Link to="/sponsors" className="donate-button">DONATE</Link>
+            <a href="https://securepay.cuit.columbia.edu/payment/pub/cufrsponsorships/" className="donate-button">Donate</a>
           </div>
         </div>
       </section>

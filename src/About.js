@@ -97,7 +97,41 @@ function About() {
         </div>
       </section>
 
-      {/* Remaining JSX stays the same — just remember to update any other image paths similarly */}
+       {/* Who We Are & Mission - Side-by-Side */}
+      <section className="side-by-side-wrapper">
+        <div className="side-by-side-column">
+          <h2 className="section-title">WHO WE ARE</h2>
+          <p className="section-text">
+            We're a student-run engineering team that designs, builds, and races a formula-style electric
+            vehicle each year. Our team blends hands-on fabrication, advanced design, and project management, preparing
+            students for real-world engineering challenges. The finished racecar is a testament to our team's incredible
+            work ethic and dedication.
+          </p>
+        </div>
+        <div className="side-by-side-column">
+          <h2 className="section-title">OUR MISSION</h2>
+          <p className="section-text">
+            Our mission is to educate and develop the next generation of engineers through real-world project experience,
+            teamwork, and innovation. We strive to push the boundaries of electric vehicle technology and cultivate a strong,
+            inclusive engineering community.
+          </p>
+        </div>
+      </section>
+
+      {/* By the Numbers */}
+      <section className="numbers-section">
+      <h2 className="section-title">2025 BY THE NUMBERS</h2>
+      <div className="stats-grid">
+        <StatCard end={230} label="Members" />
+        <StatCard end={23} label="Nationalities" />
+        <StatCard end={16} label="Majors" />
+        <StatCard end={16} label="E-Board Members" />
+        <StatCard end={20} label="Sponsors" />
+        <StatCard end={5} label="Seconds 0-60 MPH" suffix="s" />
+        <StatCard end={9} label="Increase in Club Involvement" prefix="x" />
+        <StatCard end={5000} label="Spending Reductions" prefix="$" />
+      </div>
+      </section>
       
       <section className="subteams-section">
         <h2 className="section-title">SUBTEAMS</h2>

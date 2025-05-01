@@ -43,7 +43,7 @@ function Footer() {
           {/* Bottom Right Buttons */}
           <div style={buttonContainerStyle}>
             <a href="mailto:fsae@columbia.edu" style={buttonStyle}>Contact Us</a>
-            <Link to="/sponsors" style={donateButtonStyle}>Donate</Link>
+            <a href="https://securepay.cuit.columbia.edu/payment/pub/cufrsponsorships/" style={donateButtonStyle}>Donate</a>
           </div>
         </div>
       </div>

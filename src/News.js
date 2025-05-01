@@ -12,7 +12,7 @@ function News() {
           className="news-hero-image"
         />
         <div className="news-overlay">
-          <h1 className="news-title">NEWS & UPDATES</h1>
+          <h1 className="news-title">NEWS</h1>
         </div>
       </section>
 
@@ -25,7 +25,7 @@ function News() {
             title="Mailchimp Form"
             src="https://columbia.us8.list-manage.com/subscribe?u=8f5b16d3f1298f4c5e2ab5005&id=d609a01ac3"
             width="100%" 
-            height="300px" 
+            height="700px" 
             frameBorder="0"
             style={{ border: "none", backgroundColor: "white", borderRadius: "8px" }}
           ></iframe>
@@ -35,13 +35,14 @@ function News() {
       {/* Featured Newsletter */}
       <section className="newsletter-section">
         <h2>Latest Newsletter</h2>
-        <div className="newsletter-frame">
+        <div className="newsletter-frame fullscreen-pdf">
           <iframe
             title="Latest Newsletter"
             src={`${process.env.PUBLIC_URL}/newsletters/Career Advice, Livery, and Updates!!.pdf`}
             width="100%"
-            height="700px"
+            height="100%"
             frameBorder="0"
+            style={{ border: 'none' }}
           ></iframe>
         </div>
       </section>
@@ -49,14 +50,15 @@ function News() {
       {/* Past Newsletters */}
       <section className="newsletter-section">
         <h2>Past Newsletters</h2>
-        <div className="newsletter-frame">
-          <iframe
-            title="Past Newsletter"
-            src={`${process.env.PUBLIC_URL}/newsletters/No Speed Limits Here!!.pdf`}
-            width="100%"
-            height="700px"
-            frameBorder="0"
-          ></iframe>
+        <div className="past-newsletter-links">
+          <a
+            href={`${process.env.PUBLIC_URL}/newsletters/No Speed Limits Here!!.pdf`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="newsletter-link"
+          >
+            No Speed Limits Here!!
+          </a>
         </div>
       </section>
     </div>
