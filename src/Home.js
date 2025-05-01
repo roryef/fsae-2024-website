@@ -122,7 +122,7 @@ function Home() {
         <img src="/groups/team_wide.png" alt="Team Stats" className="stats-image" />
         <div className="stats-overlay">
           <h2 className="stats-heading">COLUMBIA'S LARGEST ENGINEERING CLUB</h2>
-          <p className="stats-text">230 MEMBERS, 24 SPONSORS, 16 E-BOARD</p>
+          <p className="stats-text">230 MEMBERS, 20 SPONSORS, 16 E-BOARD</p>
           <div className="stats-button-container">
             <Link to="/about" className="small-button">ABOUT</Link>
             <Link to="/sponsors" className="small-button">SPONSORS</Link>

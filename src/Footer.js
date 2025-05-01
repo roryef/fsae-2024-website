@@ -17,7 +17,7 @@ function Footer() {
             <a href="https://www.instagram.com/columbiafsae?igsh=MTNqYTJtNjVqNmozbA==" target="_blank" rel="noopener noreferrer">
               <img src="/logos/instagram.png" alt="Instagram" style={iconStyle} />
             </a>
-            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.youtube.com/@columbiafsae" target="_blank" rel="noopener noreferrer">
               <img src="/logos/youtube.png" alt="YouTube" style={iconStyle} />
             </a>
             <a href="https://www.tiktok.com/@columbiafsae" target="_blank" rel="noopener noreferrer">
@@ -44,7 +44,7 @@ function Footer() {
         <div style={rightSectionStyle}>
           {/* Bottom Right Buttons */}
           <div style={buttonContainerStyle}>
-            <Link to="/join" style={buttonStyle}>Contact</Link>
+            <a href="mailto:fsae@columbia.edu" style={buttonStyle}>Contact Us</a>
             <Link to="/sponsors" style={donateButtonStyle}>Donate</Link>
           </div>
         </div>
