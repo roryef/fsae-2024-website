@@ -6,7 +6,11 @@ function News() {
     <div className="news-page">
       {/* Hero Section */}
       <section className="news-hero">
-        <img src="/groups/team_wide.png" alt="News Hero" className="news-hero-image" />
+        <img
+          src={`${process.env.PUBLIC_URL}/groups/team_wide.png`}
+          alt="News Hero"
+          className="news-hero-image"
+        />
         <div className="news-overlay">
           <h1 className="news-title">NEWS & UPDATES</h1>
         </div>
@@ -34,7 +38,7 @@ function News() {
         <div className="newsletter-frame">
           <iframe
             title="Latest Newsletter"
-            src="/newsletters/Career Advice, Livery, and Updates!!.pdf"
+            src={`${process.env.PUBLIC_URL}/newsletters/Career Advice, Livery, and Updates!!.pdf`}
             width="100%"
             height="700px"
             frameBorder="0"
@@ -48,7 +52,7 @@ function News() {
         <div className="newsletter-frame">
           <iframe
             title="Past Newsletter"
-            src="/newsletters/No Speed Limits Here!!.pdf"
+            src={`${process.env.PUBLIC_URL}/newsletters/No Speed Limits Here!!.pdf`}
             width="100%"
             height="700px"
             frameBorder="0"
@@ -60,3 +64,4 @@ function News() {
 }
 
 export default News;
+

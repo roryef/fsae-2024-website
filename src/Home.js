@@ -37,32 +37,32 @@ function Home() {
     {
       title: '2024–25 EV',
       description: 'Coming Soon!',
-      image: '/car/2324-2.jpg',
+      image: `${process.env.PUBLIC_URL}/car/2324-2.jpg`,
     },
     {
       title: '2023–24 EV',
       description: 'Mid-engine electric platform built for precision and acceleration.',
-      image: '/car/2324-2.jpg',
+      image: `${process.env.PUBLIC_URL}/car/2324-2.jpg`,
     },
     {
       title: '2022–23 EV',
       description: 'Rear-engine combustion design with optimized suspension geometry.',
-      image: '/car/2324-2.jpg',
+      image: `${process.env.PUBLIC_URL}/car/2324-2.jpg`,
     },
     {
       title: '2021–22 IC',
       description: 'Rear-engine combustion design with optimized suspension geometry.',
-      image: '/car/2324-2.jpg',
+      image: `${process.env.PUBLIC_URL}/car/2324-2.jpg`,
     },
     {
       title: '2020–21 IC',
       description: 'First-gen EV prototype with custom drivetrain and telemetry.',
-      image: '/car/2324-2.jpg',
+      image: `${process.env.PUBLIC_URL}/car/2324-2.jpg`,
     },
     {
       title: '2019–20 EV',
       description: 'Lightweight chassis and track-ready aerodynamics.',
-      image: '/car/2324-2.jpg',
+      image: `${process.env.PUBLIC_URL}/car/2324-2.jpg`,
     },
   ];
 
@@ -71,12 +71,12 @@ function Home() {
       {/* Hero Section */}
       <section className="hero-section">
         <video autoPlay loop muted playsInline className="hero-video">
-          <source src="/car/hero_short.mov" type="video/mp4" />
+          <source src={`${process.env.PUBLIC_URL}/car/hero_short.mov`} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="hero-overlay"></div>
         <div className="overlay-content">
-          <img src="/logos/LogoWhite.png" alt="Logo" className="logo" />
+          <img src={`${process.env.PUBLIC_URL}/logos/LogoWhite.png`} alt="Logo" className="logo" />
           <h1 className="heading">Columbia University Formula Racing</h1>
           <div className="stats-button-container">
             <Link to="/join" className="button">JOIN US</Link>
@@ -88,38 +88,34 @@ function Home() {
       {/* Countdown Section */}
       <section className="countdown-section">
         <div className="countdown-content-wrapper">
-          {/* Left: Countdown */}
           <div className="countdown-left">
             <h2 className="countdown-heading">COUNTDOWN TO COMPETITION</h2>
             <div className="timer">
-              <div className="unit">
-                <span className="number">{timeLeft.days}</span>
-                <span className="label">Days</span>
-              </div>
-              <div className="unit">
-                <span className="number">{timeLeft.hours}</span>
-                <span className="label">Hours</span>
-              </div>
-              <div className="unit">
-                <span className="number">{timeLeft.minutes}</span>
-                <span className="label">Minutes</span>
-              </div>
-              <div className="unit">
-                <span className="number">{timeLeft.seconds}</span>
-                <span className="label">Seconds</span>
-              </div>
+              {['days', 'hours', 'minutes', 'seconds'].map((unit) => (
+                <div key={unit} className="unit">
+                  <span className="number">{timeLeft[unit]}</span>
+                  <span className="label">{unit.charAt(0).toUpperCase() + unit.slice(1)}</span>
+                </div>
+              ))}
             </div>
           </div>
-          {/* Right: Image Card */}
           <div className="countdown-image-card">
-            <img src="/groups/comp.jpg" alt="Last Year's Competition" className="countdown-image" />
+            <img
+              src={`${process.env.PUBLIC_URL}/groups/comp.jpg`}
+              alt="Last Year's Competition"
+              className="countdown-image"
+            />
           </div>
         </div>
       </section>
 
       {/* Stats Section */}
       <section className="stats-section">
-        <img src="/groups/team_wide.png" alt="Team Stats" className="stats-image" />
+        <img
+          src={`${process.env.PUBLIC_URL}/groups/team_wide.png`}
+          alt="Team Stats"
+          className="stats-image"
+        />
         <div className="stats-overlay">
           <h2 className="stats-heading">COLUMBIA'S LARGEST ENGINEERING CLUB</h2>
           <p className="stats-text">230 MEMBERS, 20 SPONSORS, 16 E-BOARD</p>
@@ -131,8 +127,8 @@ function Home() {
         </div>
       </section>
 
-      {/* Cars Section
-      <section className="cars-section">
+      {/* Cars Section (commented out) */}
+      {/* <section className="cars-section">
         <h2 className="section-title">OUR CARS</h2>
         <p className="section-text">
           Explore some of our recent vehicles — each designed, built, and tested by Columbia students.
@@ -158,3 +154,4 @@ function Home() {
 }
 
 export default Home;
+

@@ -6,99 +6,93 @@ function Subteams() {
     <div style={pageStyle}>
       {/* Hero */}
       <section style={heroSectionStyle}>
-        <img src="/car/2324-1.jpg" alt="Our Team" style={heroImageStyle} />
+        <img src={`${process.env.PUBLIC_URL}/car/2324-1.jpg`} alt="Our Team" style={heroImageStyle} />
         <div style={grayOverlayStyle}></div>
-
-
         <div style={overlayStyle}>
           <h1 style={heroHeadingStyle}>SUBTEAMS</h1>
         </div>
-
       </section>
 
+      {/* Mechanical Systems */}
       <div style={horizontalCardStyle}>
-      {/* Section Title Column */}
-      <div style={sectionTitleColumnStyle}>
-        <h3 style={sectionTitleStyle}>Mechanical Systems</h3>
+        <div style={sectionTitleColumnStyle}>
+          <h3 style={sectionTitleStyle}>Mechanical Systems</h3>
+        </div>
+        <div style={subteamsWrapperStyle}>
+          <div style={subteamColumnStyle}>
+            <h4 style={subteamTitleStyle}>Controls</h4>
+            <p style={subteamDescStyle}>
+              Responsible for the pedals, seat, driver controls, and electronics mounting of the vehicle.
+            </p>
+          </div>
+          <div style={subteamColumnStyle}>
+            <h4 style={subteamTitleStyle}>Vehicle Dynamics</h4>
+            <p style={subteamDescStyle}>
+              Handles suspension, brakes, steering, and hubs/uprights systems.
+            </p>
+          </div>
+          <div style={subteamColumnStyle}>
+            <h4 style={subteamTitleStyle}>Frame/Body/Aero</h4>
+            <p style={subteamDescStyle}>
+              Designs the chassis, body, aero, and airflow systems.
+            </p>
+          </div>
+          <div style={subteamColumnStyle}>
+            <h4 style={subteamTitleStyle}>Powertrain</h4>
+            <p style={subteamDescStyle}>
+              Manages the drivetrain, cooling hardware, and HV enclosure components.
+            </p>
+          </div>
+        </div>
       </div>
 
-      {/* Subteam Columns */}
-      <div style={subteamsWrapperStyle}>
-        <div style={subteamColumnStyle}>
-          <h4 style={subteamTitleStyle}>Controls</h4>
-          <p style={subteamDescStyle}>
-            Responsible for the pedals, seat, driver controls, and electronics mounting of the vehicle.
-          </p>
+      {/* Electrical Systems */}
+      <div style={horizontalCardStyle}>
+        <div style={sectionTitleColumnStyle}>
+          <h3 style={sectionTitleStyle}>Electrical Systems</h3>
         </div>
-        <div style={subteamColumnStyle}>
-          <h4 style={subteamTitleStyle}>Vehicle Dynamics</h4>
-          <p style={subteamDescStyle}>
-            Handles suspension, brakes, steering, and hubs/uprights systems.
-          </p>
-        </div>
-        <div style={subteamColumnStyle}>
-          <h4 style={subteamTitleStyle}>Frame/Body/Aero</h4>
-          <p style={subteamDescStyle}>
-            Designs the chassis, body, aero, and airflow systems.
-          </p>
-        </div>
-        <div style={subteamColumnStyle}>
-          <h4 style={subteamTitleStyle}>Powertrain</h4>
-          <p style={subteamDescStyle}>
-            Manages the drivetrain, cooling hardware, and HV enclosure components.
-          </p>
+        <div style={subteamsWrapperStyle}>
+          <div style={subteamColumnStyle}>
+            <h4 style={subteamTitleStyle}>High Voltage</h4>
+            <p style={subteamDescStyle}>
+              Oversees the tractive system, battery pack, charging, and high-voltage electronics.
+            </p>
+          </div>
+          <div style={{ ...subteamColumnStyle, borderRight: 'none' }}>
+            <h4 style={subteamTitleStyle}>Low Voltage</h4>
+            <p style={subteamDescStyle}>
+              Handles software, wiring harness, shutdown system, and vehicle telemetry.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
 
-    {/* Electrical Systems */}
-    <div style={horizontalCardStyle}>
-      <div style={sectionTitleColumnStyle}>
-        <h3 style={sectionTitleStyle}>Electrical Systems</h3>
-      </div>
-      <div style={subteamsWrapperStyle}>
-        <div style={subteamColumnStyle}>
-          <h4 style={subteamTitleStyle}>High Voltage</h4>
-          <p style={subteamDescStyle}>
-            Oversees the tractive system, battery pack, charging, and high-voltage electronics.
-          </p>
+      {/* Admin */}
+      <div style={horizontalCardStyle}>
+        <div style={sectionTitleColumnStyle}>
+          <h3 style={sectionTitleStyle}>Admin</h3>
         </div>
-        <div style={{ ...subteamColumnStyle, borderRight: 'none' }}>
-          <h4 style={subteamTitleStyle}>Low Voltage</h4>
-          <p style={subteamDescStyle}>
-            Handles software, wiring harness, shutdown system, and vehicle telemetry.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    {/* Admin */}
-    <div style={horizontalCardStyle}>
-      <div style={sectionTitleColumnStyle}>
-        <h3 style={sectionTitleStyle}>Admin</h3>
-      </div>
-      <div style={subteamsWrapperStyle}>
-        <div style={subteamColumnStyle}>
-          <h4 style={subteamTitleStyle}>Business</h4>
-          <p style={subteamDescStyle}>
-            Builds the business case for competition and develops the club’s growth strategy.
-          </p>
-        </div>
-        <div style={subteamColumnStyle}>
-          <h4 style={subteamTitleStyle}>Sponsor Team</h4>
-          <p style={subteamDescStyle}>
-            Conducts sponsor outreach, maintains partnerships, and manages fundraising.
-          </p>
-        </div>
-        <div style={{ ...subteamColumnStyle, borderRight: 'none' }}>
-          <h4 style={subteamTitleStyle}>Social</h4>
-          <p style={subteamDescStyle}>
-            Coordinates club events, team culture, and external engagement.
-          </p>
+        <div style={subteamsWrapperStyle}>
+          <div style={subteamColumnStyle}>
+            <h4 style={subteamTitleStyle}>Business</h4>
+            <p style={subteamDescStyle}>
+              Builds the business case for competition and develops the club’s growth strategy.
+            </p>
+          </div>
+          <div style={subteamColumnStyle}>
+            <h4 style={subteamTitleStyle}>Sponsor Team</h4>
+            <p style={subteamDescStyle}>
+              Conducts sponsor outreach, maintains partnerships, and manages fundraising.
+            </p>
+          </div>
+          <div style={{ ...subteamColumnStyle, borderRight: 'none' }}>
+            <h4 style={subteamTitleStyle}>Social</h4>
+            <p style={subteamDescStyle}>
+              Coordinates club events, team culture, and external engagement.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-
 
       {/* Buttons */}
       <section style={buttonsSectionStyle}>

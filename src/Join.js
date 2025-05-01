@@ -1,12 +1,9 @@
 import React from 'react';
-import Slider from 'react-slick';
 import './Join.css';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-
 function Join() {
-
   const photos = [
     '6C498993-2C4B-4548-BDA8-604517AD295B_1_201_a.jpeg',
     '58C80213-C939-4284-87F3-F46332B018F0_1_201_a.jpeg',
@@ -48,25 +45,16 @@ function Join() {
     'ZoharFord_FSAE_4_10_2025_SF-14.jpg',
     'ZoharFord_FSAE_4_10_2025_SF-18.jpg'
   ];
-  
-
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    autoplay: true,
-    autoplaySpeed: 2500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: true,
-  };
-
 
   return (
     <div className="join-page">
       {/* Hero Section */}
       <section className="join-hero">
-        <img src="/groups/team.png" alt="Team Hero" className="join-hero-image" />
+        <img
+          src={`${process.env.PUBLIC_URL}/groups/team.png`}
+          alt="Team Hero"
+          className="join-hero-image"
+        />
         <div className="join-hero-overlay">
           <h1 className="join-hero-title">JOIN US</h1>
         </div>
@@ -89,14 +77,17 @@ function Join() {
         </a>
       </section>
 
-      <Carousel autoPlay infiniteLoop showThumbs={false} showStatus={false}>
+      {/* Carousel Section */}
+      <Carousel autoPlay infiniteLoop showThumbs={true} showStatus={false}>
         {photos.map((filename, idx) => (
           <div key={idx}>
-            <img src={`/shop/${filename}`} alt={`Team ${idx}`} />
+            <img
+              src={`${process.env.PUBLIC_URL}/shop/${filename}`}
+              alt={`Team ${idx}`}
+            />
           </div>
         ))}
       </Carousel>
-
 
       {/* Contact Section */}
       <section className="join-contact">
@@ -105,7 +96,6 @@ function Join() {
           Contact Us
         </a>
       </section>
-
     </div>
   );
 }
