@@ -1,7 +1,7 @@
 {
   "name": "fsae-2024-website",
   "version": "0.1.0",
-  "homepage": "https://columbiafsae.github.io/fsae-2024-website",
+  "homepage": "https://columbiafsae.github.io",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
