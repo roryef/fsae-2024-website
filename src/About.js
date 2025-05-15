@@ -61,7 +61,7 @@ function About() {
     { name: 'Lizzie Scott', title: 'Low Voltage Chief', image: `${process.env.PUBLIC_URL}/headshots/Lizzie.jpg` },
     { name: 'William Ostling', title: 'Frame/Body/Aero Chief', image: `${process.env.PUBLIC_URL}/headshots/William.jpg` },
     { name: 'Nikaia He', title: 'Electrical Engineering Treasurer', image: `${process.env.PUBLIC_URL}/headshots/Nikaia.jpg` },
-    { name: 'Eva Sherman', title: 'Mechanical Engineering Treasurer', image: `${process.env.PUBLIC_URL}/headshots/Eva.jpg` },
+    { name: 'Eva Sharman', title: 'Mechanical Engineering Treasurer', image: `${process.env.PUBLIC_URL}/headshots/Eva.jpg` },
     { name: 'Audrey Ahn', title: 'Secretary', image: `${process.env.PUBLIC_URL}/headshots/Calvin.jpg` },
     { name: 'Louise Goldenberg', title: 'Social Chair', image: `${process.env.PUBLIC_URL}/headshots/Louise.jpg` },
   ];

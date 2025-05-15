@@ -9,6 +9,7 @@ import Sponsors from './Sponsors';
 import Join from './Join';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import Data from './Data';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/news" element={<News />} />
         <Route path="/sponsors" element={<Sponsors />} />
         <Route path="/join" element={<Join />} />
+        <Route path="/data" element={<Data />} />
       </Routes>
       <Footer />
     </Router>
