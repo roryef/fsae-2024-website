@@ -10,14 +10,14 @@ function Data() {
       },
       {
         name: "Run Log",
-        url: "https://drive.google.com/file/d/YOUR_FILE_ID_2/view?usp=sharing",
+        url: "https://docs.google.com/spreadsheets/d/1luxBProBir_F7Uc2U7_BtDbOPCs9bM_c7ZsOwdZH3Wg/edit?gid=0#gid=0",
       },
       {
         name: "Data Debrief",
         url: "https://docs.google.com/document/d/1SfoN8MN4fyHJR9iM_1yXkLWH_XJ2h-Q_mCqtj6qImqw/edit?tab=t.0#heading=h.rmtps7vr3rj",
       },
       {
-        name: "MOTEC Data",
+        name: "MOTEC Data - Garage Loops",
         url: "https://drive.google.com/file/d/19BAyeTNlroq0qZxfSR9n7D-EvIupW2Vb/view?usp=sharing",
       },
       {
@@ -28,11 +28,11 @@ function Data() {
     "May 9, 2025": [
       {
         name: "Setup Sheet",
-        url: "https://drive.google.com/file/d/YOUR_FILE_ID_3/view?usp=sharing",
+        url: "https://docs.google.com/spreadsheets/d/1vu30C2sP-GOUOol7s5a7TJO-kla68ZJZy_RbrkEXdwQ/edit?gid=0#gid=0",
       },
       {
         name: "MOTEC Data",
-        url: "https://drive.google.com/file/d/YOUR_FILE_ID_4/view?usp=sharing",
+        url: "https://drive.google.com/file/d/1IH1C-7yfydN7tmbg5RvfPOt0R6VJbtdk/view?usp=drive_link",
       },
     ],
   };
