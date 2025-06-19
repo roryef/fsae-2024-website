@@ -85,27 +85,16 @@ function Home() {
         </div>
       </section>
 
-      {/* Countdown Section */}
-      <section className="countdown-section">
-        <div className="countdown-content-wrapper">
-          <div className="countdown-left">
-            <h2 className="countdown-heading">COMPETITION IS HERE!</h2>
-            <div className="timer">
-              {['days', 'hours', 'minutes', 'seconds'].map((unit) => (
-                <div key={unit} className="unit">
-                  <span className="number">{timeLeft[unit]}</span>
-                  <span className="label">{unit.charAt(0).toUpperCase() + unit.slice(1)}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="countdown-image-card">
-            <img
-              src={`${process.env.PUBLIC_URL}/groups/comp.jpg`}
-              alt="Last Year's Competition"
-              className="countdown-image"
-            />
-          </div>
+      <section className="ev25-preview-section">
+        <img src="/ev25/25-1.jpg" alt="EV25 Preview" className="ev25-preview-image" />
+        <div className="ev25-preview-overlay">
+          <h2 className="ev25-preview-title">INTRODUCING EV25</h2>
+          <p className="ev25-preview-text">
+            Built by 200+ Columbia engineers, EV25 blends power, precision, and team spirit.
+          </p>
+          <Link to="/cars" className="ev25-preview-button">
+            Explore the Car →
+          </Link>
         </div>
       </section>
 
@@ -117,7 +106,7 @@ function Home() {
           className="stats-image"
         />
         <div className="stats-overlay">
-          <h2 className="stats-heading">COLUMBIA'S LARGEST ENGINEERING CLUB</h2>
+          <h2 className="stats-heading">JOIN COLUMBIA'S LARGEST ENGINEERING CLUB</h2>
           <p className="stats-text">230 MEMBERS, 20 SPONSORS, 16 E-BOARD</p>
           <div className="stats-button-container">
             <Link to="/about" className="small-button">ABOUT</Link>
