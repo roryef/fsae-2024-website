@@ -92,7 +92,12 @@ function Home() {
           <p className="ev25-preview-text">
             Built by 200+ Columbia engineers, EV25 blends power, precision, and team spirit.
           </p>
-          <Link to="/cars" className="ev25-preview-button">
+          <Link
+            to="/cars"
+            replace
+            className="ev25-preview-button"
+            onClick={() => window.scrollTo(0, 0)}
+          >
             Explore the Car →
           </Link>
         </div>
