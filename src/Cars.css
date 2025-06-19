@@ -1,0 +1,367 @@
+/* Page Layout */
+.cars-page {
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Hero Section */
+  .cars-hero-section {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+  }
+  
+  .cars-hero-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .cars-hero-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.55);
+    z-index: 1;
+  }
+  
+  .cars-hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+  }
+  
+  .cars-hero-text h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+
+  .cars-hero-intro-container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .cars-hero-intro-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+  }
+  
+  .cars-hero-intro-text {
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    max-width: 600px;
+    /* background-color: rgba(0, 0, 0, 0.55); */
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    text-align: left;
+  }
+  
+  .cars-hero-intro-text h2 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+  }
+  
+  .cars-hero-intro-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+
+
+  .cars-hero-intro-container-1 {
+    position: relative;
+    width: 100%;
+  }
+  
+  .cars-hero-intro-image-1 {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+  }
+  
+  .cars-hero-intro-text-1 {
+    position: absolute;
+    top: 40px;
+    left: 60px;
+    max-width: 600px;
+    /* background-color: rgba(0, 0, 0, 0.55); */
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    text-align: left;
+  }
+  
+  .cars-hero-intro-text-1 h2 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+  }
+  
+  .cars-hero-intro-text-1 p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+
+
+  /* Toggle Buttons */
+  .car-toggle-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .car-toggle-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: 2px solid white;
+    border-radius: 30px;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .car-toggle-button.active,
+  .car-toggle-button:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  /* Car Main Image */
+  .car-main-image {
+    width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+    margin-bottom: 40px;
+  }
+  
+  /* Description Section */
+  .car-description {
+    max-width: 1000px;
+    margin: 0 auto 40px auto;
+    padding: 0 20px;
+    text-align: center;
+  }
+  
+  .car-description h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .car-description p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  /* High-Level Sections with Images and Text */
+  .cars-overlay-block {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .cars-overlay-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .cars-overlay-text {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    max-width: 25%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .cars-overlay-text h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+  
+  .cars-overlay-text ul {
+    padding-left: 20px;
+    list-style: disc;
+  }
+  
+/* 111111111111111111 */
+  .cars-overlay-block-1 {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .cars-overlay-image-1 {
+    width: 100%;
+    height: 750px;
+    object-fit: cover; 
+    object-position: bottom;
+    display: block;
+  }
+  
+  .cars-overlay-text-1 {
+    position: absolute;
+    top: 100px;
+    right: 120px;
+    max-width: 40%;
+
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .cars-overlay-text-1 h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+  
+  .cars-overlay-text-1 ul {
+    padding-left: 20px;
+    list-style: disc;
+  }
+
+/* 2222222222222222222 */
+  .cars-overlay-block-2 {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .cars-overlay-image-2 {
+    width: 100%;
+    height: 1000px;
+    object-fit: cover;
+    object-position: bottom;
+    display: block;
+  }
+  
+  .cars-overlay-text-2 {
+    position: absolute;
+    top: 80px;
+    left: 120px;
+    max-width: 602%;
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .cars-overlay-text-2 h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+  
+  .cars-overlay-text-2 ul {
+    padding-left: 20px;
+    list-style: disc;
+  }
+
+  /* 3333333333333333 */
+  .cars-overlay-block-3 {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .cars-overlay-image-3 {
+    width: 100%;
+    height: 1000px;
+    object-fit: cover;
+    object-position: bottom;
+    display: block;
+  }
+
+  .cars-overlay-text-3 {
+    position: absolute;
+    top: 80px;
+    left: 120px;
+    max-width: 602%;
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .cars-overlay-text-3 h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+  
+  .cars-overlay-text-3 ul {
+    padding-left: 20px;
+    list-style: disc;
+  }
+
+
+
+  /* Stats Section */
+  .cars-stats-section {
+    background-color: #111;
+    color: white;
+    padding: 80px 30px;
+    text-align: center;
+  }
+  
+  .cars-stats-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  .cars-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .cars-stat-card {
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    padding: 20px;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .cars-stat-number {
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #00C8FF;
+    min-width: 80px;
+    text-align: right;
+  }
+  
+  .cars-stat-label {
+    font-size: 0.8rem;
+    text-align: right;
+    color: white;
+  }
+  

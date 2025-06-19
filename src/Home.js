@@ -4,7 +4,7 @@ import './Home.css';
 
 function Home() {
   // Timer Calculations
-  const competitionDate = new Date("2025-06-01T06:30:00");
+  const competitionDate = new Date("2025-06-17T06:30:00");
   const calculateTimeLeft = () => {
     const now = new Date();
     const difference = competitionDate - now;
@@ -89,7 +89,7 @@ function Home() {
       <section className="countdown-section">
         <div className="countdown-content-wrapper">
           <div className="countdown-left">
-            <h2 className="countdown-heading">COUNTDOWN TO COMPETITION</h2>
+            <h2 className="countdown-heading">COMPETITION IS HERE!</h2>
             <div className="timer">
               {['days', 'hours', 'minutes', 'seconds'].map((unit) => (
                 <div key={unit} className="unit">
