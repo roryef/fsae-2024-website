@@ -30,7 +30,6 @@
 
 /* Global Styles */
 .page {
-  min-width: 100vh;
   width: 100%;
   overflow-x: hidden;
   background-color: black;
@@ -74,6 +73,8 @@
   text-align: center;
   color: white;
   z-index: 2;
+  width: 90%;
+  padding: 0 10px;
 }
 
 .logo {
@@ -180,7 +181,7 @@
   position: relative;
   width: 100%;
   height: 70vh;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 
 .stats-image {
@@ -321,5 +322,137 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1024px) {
+  .countdown-content-wrapper {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .ev25-preview-overlay {
+    position: static;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    margin-top: -40px;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .cars-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .car-card {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 2rem;
+    padding: 0 10px;
+    word-break: break-word;
+    line-height: 1.3;
+  }
+
+  .logo {
+    height: 70px;
+  }
+
+  .button,
+  .donate-button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .countdown-heading {
+    font-size: 1.6rem;
+  }
+
+  .number {
+    font-size: 2rem;
+  }
+
+  .label {
+    font-size: 0.9rem;
+  }
+
+  .stats-heading {
+    font-size: 1.5rem;
+  }
+
+  .stats-text {
+    font-size: 1rem;
+  }
+
+  .small-button {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  .overlay-content {
+    width: 90%;
+    max-width: 90vw;
+    box-sizing: border-box;
+    padding: 0 10px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+  }
+
+  .stats-button-container {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 1.4rem;
+  }
+
+  .logo {
+    height: 60px;
+  }
+
+  .button,
+  .donate-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .countdown-section {
+    padding: 100px 20px;
+  }
+
+  .countdown-heading {
+    font-size: 1.4rem;
+  }
+
+  .number {
+    font-size: 1.8rem;
+  }
+
+  .label {
+    font-size: 0.8rem;
+  }
+
+  .car-title {
+    font-size: 1.3rem;
+  }
+
+  .car-desc {
+    font-size: 0.9rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-text {
+    font-size: 1rem;
   }
 }
