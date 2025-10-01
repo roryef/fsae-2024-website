@@ -117,12 +117,10 @@ The `gh-pages` package will publish the build to the `gh-pages` branch.
 
 This project is licensed under the [MIT License](./LICENSE).  
 
-> **Note**: This repository is a fork of the Columbia Formula Racing team’s internal website project. Licensing details are inherited from the original maintainers. If you intend to redistribute or reuse this project, verify any additional restrictions with the upstream repository.
+> **Note**: This repository is a fork of the Columbia Formula Racing team’s internal website project. Licensing details are inherited from the original maintainers. If you intend to redistribute or reuse this project in any way, verify any additional restrictions with the upstream repository.
 
 ## Acknowledgments
 
 - Columbia Formula Racing team members for content and design contributions  
 - Original maintainers of the upstream repository  
 - Sponsors and supporters of Columbia FSAE
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
